@@ -8,8 +8,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Pinnies is ERC721, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
-    string private uri =
-        "ipfs://bafkreibcbcnfk2v57p3e6fmyvukq43r5kb5ydqat2x2ox7yy45to5bzlpe";
+    string private uri = "ipfs://bafkreibcbcnfk2v57p3e6fmyvukq43r5kb5ydqat2x2ox7yy45to5bzlpe";
 
     constructor() ERC721("Pinnies", "PINS") Ownable(msg.sender) {}
 
@@ -22,15 +21,11 @@ contract Pinnies is ERC721, ERC721URIStorage, Ownable {
 
     // The following functions are overrides required by Solidity.
 
-    function tokenURI(
-        uint256 tokenId
-    ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+    function tokenURI(uint256 tokenId) public view override(ERC721, ERC721URIStorage) returns (string memory) {
         return super.tokenURI(tokenId);
     }
 
-    function supportsInterface(
-        bytes4 interfaceId
-    ) public view override(ERC721, ERC721URIStorage) returns (bool) {
+    function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721URIStorage) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 }

@@ -34,10 +34,7 @@ contract PinniesTest is Test {
         vm.startPrank(owner);
         uint256 tokenId = pinnies.safeMint(user);
         string memory uri = pinnies.tokenURI(tokenId);
-        assertEq(
-            uri,
-            "ipfs://bafkreibcbcnfk2v57p3e6fmyvukq43r5kb5ydqat2x2ox7yy45to5bzlpe"
-        );
+        assertEq(uri, "ipfs://bafkreibcbcnfk2v57p3e6fmyvukq43r5kb5ydqat2x2ox7yy45to5bzlpe");
         vm.stopPrank();
     }
 
